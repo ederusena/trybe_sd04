@@ -134,3 +134,10 @@ Lembre-se de fazer um commit quando terminar de alterar os arquivos;
 Depois do commit, faça sempre um push;
 
 Confira as alterações no GitHub.
+
+### Learn the Basics of Git in Under 10 Minutes
+
+https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
+
+### Tutorial para iniciar com o Git e o GitHub
+http://devfuria.com.br/git/tutorial-iniciando-git/
