@@ -141,3 +141,19 @@ https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da
 
 ### Tutorial para iniciar com o Git e o GitHub
 http://devfuria.com.br/git/tutorial-iniciando-git/
+
+
+### 2.1 - Git log
+
+```
+touch eder
+git add .
+git commit -m "criacao do arquivo eder"
+git log
+git log eder --ira verificar commits que foram feito com esse arquivo
+git status
+git show f1e11 - usar 4 primeiros caracteres do hash gerado é o suficiente
+git push origin master
+```
+
+### 2.2 - Git remove
