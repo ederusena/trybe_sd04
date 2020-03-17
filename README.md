@@ -157,3 +157,39 @@ git push origin master
 ```
 
 ### 2.2 - Git remove
+
+
+```
+➜  exercisesTrybe git:(master) ✗ cat > arq3       
+teste de remocao
+➜  exercisesTrybe git:(master) ✗ git add .             
+➜  exercisesTrybe git:(master) ✗ git commit -m "commit do arq3"  
+[master 7f31bc5] commit do arq3
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arq3
+➜  exercisesTrybe git:(master) git rm arq3                   
+rm 'arq3'
+➜  exercisesTrybe git:(master) ✗ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    arq3
+
+➜  exercisesTrybe git:(master) ✗ git commit -m "arq 3 excluido"
+[master 63ea5f4] arq 3 excluido
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 arq3
+➜  exercisesTrybe git:(master) 
+
+➜  exercisesTrybe git:(master) git log --diff-filter=D --summary
+➜  exercisesTrybe git:(master) git checkout 63ea5f~1 arq3       
+➜  exercisesTrybe git:(master) ✗ git add .                 
+➜  exercisesTrybe git:(master) ✗ git commit -m "arq3 recuperado"
+[master 5c25977] arq3 recuperado
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arq3
+➜  exercisesTrybe git:(master) git push origin master   
+```
+
+"
