@@ -1,8 +1,11 @@
 # trybe_sd04
+
 Notebook
 
 # Github
+
 ## Mas o que é mesmo esse Controle de Versão?
+
 Até aqui, você já sentiu na pele a dificuldade de gerenciar o trabalho realizado por diferentes pessoas ao mesmo tempo a fim de realizarem uma entrega conjunta.
 
 Esse mesmo desafio assombrava o dia a dia de quase toda pessoa que trabalhava com desenvolvimento e precisava guardar diversas versões de seus sistemas, depois juntar os pedaços daquilo que era produzido ou alterado por cada colega, de modo a ter um código final estável.
@@ -13,11 +16,11 @@ O artigo a seguir mostra, de maneira geral o que é esse Controle de Versão . L
 
 Agora que você já entende bastante qual a finalidade do controle de versão, vamos a três conceitos importantíssimos para o seu trabalho:
 
-***Ramificação (Branching);***
+**_Ramificação (Branching);_**
 
-***Mesclagem (Merge);***
+**_Mesclagem (Merge);_**
 
-***Resolução de conflitos.***
+**_Resolução de conflitos._**
 
 Em primeiro lugar, mais importante do que saber a sintaxe dos comandos, agora é hora de entender os conceitos.
 
@@ -38,29 +41,36 @@ Agora que você já configurou tudo, vamos fazer uma validação e verificar se 
 No terminal:
 
 Digite:
+
 ```
-git --version 
+git --version
 ```
+
 para saber qual versão do git está instalada.
 
-
 Seu terminal deve conter algo parecido com:
+
 ```
 git version 2.x.y
 ```
-Digite ***git config --list***
+
+Digite **_git config --list_**
 
 Seu terminal deve conter algo similar a isso:Copiar
+
 ```
 user.email=seuemail@gmail.com
 user.name=seunome
 ```
+
 Pronto, agora que tudo está devidamente instalado e configurado, vamos ao próximo passo.
 
 ### Parte 2 - Criar conta no GitHub
+
 Crie sua conta no GitHub usando seu e-mail pessoal 🐙
 
 ### Parte 3 (opcional) - Adicionando uma chave SSH na sua conta do GitHub
+
 https://medium.com/@rgdev/como-adicionar-uma-chave-ssh-na-sua-conta-do-github-linux-e0f19bbc4265
 Neste passo, vamos aprender como adicionar uma chave SSH à sua conta do GitHub, o que vai te permitir fazer push’s e pull’s sem ter que ficar digitando usuário e senha.
 
@@ -68,11 +78,14 @@ Adicionando chave SSH na conta do GitHub
 Se tiver problemas ao seguir o tutorial acima, consulte a documentação oficial do GitHub .
 
 ### Parte 4 - Do git init ao git push
+
 Agora você vai aprender a iniciar um repositório Git, fazer seu primeiro commit e subi-lo para um repositório no GitHub.
 http://www.devfuria.com.br/git/tutorial-iniciando-git/
 
 Do primeiro commit ao primeiro Push
+
 ### Parte 5 - O seu repositório no GitHub
+
 Pronto! Agora que você já é capaz de gerenciar localmente seus códigos e também enviá-los para o GitHub, é hora de colocar a casa em ordem!
 
 Durante seu curso na Trybe, seus projetos serão entregues através de pushes nos repositórios do GitHub. Nada mais natural do que fazermos isso agora enviando os exercícios de Shell Script para o GitHub, não é mesmo? 👨🏽‍💻
@@ -109,6 +122,7 @@ Crie um commit inicial utilizando:
 git add .
 git commit -m "Initial commit"
 ```
+
 Vá até o seu GitHub e crie um repositório público ;
 
 ⚠️ Lembre-se de não inicializar o repositório com um arquivo README.md, pois você já criou um nos passos anteriores! 😉
@@ -121,6 +135,7 @@ Verifique se tudo está certo com sua URL remota utilizando o comando git remote
 origin	git@github.com:john-snow/know-nothing.git (fetch)
 origin	git@github.com:john-snow/know-nothing.git (push)
 ```
+
 Agora que tudo está devidamente configurado e verificado, é hora de subir seu primeiro commit para o GitHub! 🤩
 
 Execute o comando **git push origin master** no terminal;
@@ -140,8 +155,8 @@ Confira as alterações no GitHub.
 https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
 
 ### Tutorial para iniciar com o Git e o GitHub
-http://devfuria.com.br/git/tutorial-iniciando-git/
 
+http://devfuria.com.br/git/tutorial-iniciando-git/
 
 ### 2.1 - Git log
 
@@ -158,16 +173,15 @@ git push origin master
 
 ### 2.2 - Git remove
 
-
 ```
-➜  exercisesTrybe git:(master) ✗ cat > arq3       
+➜  exercisesTrybe git:(master) ✗ cat > arq3
 teste de remocao
-➜  exercisesTrybe git:(master) ✗ git add .             
-➜  exercisesTrybe git:(master) ✗ git commit -m "commit do arq3"  
+➜  exercisesTrybe git:(master) ✗ git add .
+➜  exercisesTrybe git:(master) ✗ git commit -m "commit do arq3"
 [master 7f31bc5] commit do arq3
  1 file changed, 2 insertions(+)
  create mode 100644 arq3
-➜  exercisesTrybe git:(master) git rm arq3                   
+➜  exercisesTrybe git:(master) git rm arq3
 rm 'arq3'
 ➜  exercisesTrybe git:(master) ✗ git status
 On branch master
@@ -180,19 +194,20 @@ Changes to be committed:
 [master 63ea5f4] arq 3 excluido
  1 file changed, 2 deletions(-)
  delete mode 100644 arq3
-➜  exercisesTrybe git:(master) 
+➜  exercisesTrybe git:(master)
 
 ➜  exercisesTrybe git:(master) git log --diff-filter=D --summary
-➜  exercisesTrybe git:(master) git checkout 63ea5f~1 arq3       
-➜  exercisesTrybe git:(master) ✗ git add .                 
+➜  exercisesTrybe git:(master) git checkout 63ea5f~1 arq3
+➜  exercisesTrybe git:(master) ✗ git add .
 ➜  exercisesTrybe git:(master) ✗ git commit -m "arq3 recuperado"
 [master 5c25977] arq3 recuperado
  1 file changed, 2 insertions(+)
  create mode 100644 arq3
-➜  exercisesTrybe git:(master) git push origin master   
+➜  exercisesTrybe git:(master) git push origin master
 ```
 
 ## Agora a prática
+
 ⚠️ Para fazer os exercícios a seguir, você deve utilizar o projeto com os scripts em Shell que você criou nas aulas anteriores.
 Dessa vez, cada um deve fazer os exercícios em seu computador, ok? Vamos lá! 😋
 
@@ -207,9 +222,10 @@ Em algum arquivo .sh, na linha #2 , adicione o comentário: “Eu sou Tryber e�
 
 Exemplo:
 Copiar
-  #!/usr/bin bash
-  # Eu sou Tryber e...
-    
+#!/usr/bin bash
+
+# Eu sou Tryber e...
+
 Faça um git add nomeDoSeuArquivoShell;
 
 Agora um git commit -m "Mensagem que você gostaria";
@@ -235,7 +251,7 @@ e por último um git push -u origin shell-script-updates
 
 Abra um Pull Request com uma descrição amigável.
 
-No Slack, procure pelo canal “code-review-*” relativo à sua turma, e avise que você chegou a este ponto. O próximo passo será realizar o Code Review (CR) do projeto de outro estudante. Entre em pelo menos um Pull Request e deixe alguns comentários para seus colegas;
+No Slack, procure pelo canal “code-review-\*” relativo à sua turma, e avise que você chegou a este ponto. O próximo passo será realizar o Code Review (CR) do projeto de outro estudante. Entre em pelo menos um Pull Request e deixe alguns comentários para seus colegas;
 
 Agora, faça o merge das branches shell-script-changes e shell-script-updates na branch master, através do Pull Request:
 
