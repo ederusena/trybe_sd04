@@ -1,0 +1,132 @@
+strong.italic {
+  font-style: italic;
+}
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  background: rgb(255, 255, 255);
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+ul {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  margin: 0px;
+  padding: 24px 0px 5px 30px;
+}
+
+nav li {
+  margin-right: 40px;
+  list-style: none;
+  text-decoration: none;
+  display: inline;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white !important;
+}
+
+.h1-principal {
+  color: #111;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+.h3-principal{
+    color: #7c795d; 
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 28px; 
+    font-weight: 400; 
+    line-height: 32px; 
+    margin: 0 0 24px;
+}
+h2 {
+  padding: 1em;
+  border-radius: 8px;
+  background-color: rgba(46, 46, 46, 0.356);
+}
+.info-container{
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+}
+.content {
+  background-color: rgba(178, 199, 238, 0.247);
+}
+article {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+header img {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  text-align: center;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+table.infobox {
+  color: #000;
+  font-size: 90%;
+  line-height: 1.1em;
+  float: right;
+  clear: right;
+  margin: 0.5em 0 0.5em 1em;
+  width: 23em;
+  border: 1px solid #aaa;
+  padding: 2px;
+}
+
+aside {
+  align-content: stretch;
+}
+.article-info {
+  padding: 10px;
+  background-color: #e9ecef9e;
+  margin: 50px 5px;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+.tableinfo table {
+  width: 50px;
+  position: float;
+  border: solid;
+  text-align: left;
+}
+.article-descricao {
+  background-color: rgba(252, 248, 248, 0.705);
+}
+.article-visao {
+  background-color: rgba(173, 173, 173, 0.342);
+}
+.article-refbio {
+  background-color: rgb(187, 187, 187);
+}
+.article-refbio a {
+  text-decoration: none;
+}
