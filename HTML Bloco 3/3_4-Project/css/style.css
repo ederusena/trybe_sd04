@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7158c1;
+}
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 13vh 13vh 70vh 20vh;
+    grid-template-areas: "nav nav"
+                "header header"
+                        "main aside"
+                        "footer footer";
+}
+
+nav {
+    background: black;
+    grid-area: nav;
+}
+
+header {
+    background: yellow;
+    grid-area: header;
+}
+
+main {
+    background: blue;
+    grid-area: main;
+}
+
+aside {
+    background: green;
+    grid-area: aside;
+}
+
+footer {
+    background: red;
+    grid-area: fotter;
+}
+
