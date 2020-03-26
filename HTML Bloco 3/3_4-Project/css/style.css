@@ -9,31 +9,41 @@ html, body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 13vh 13vh 70vh 20vh;
     grid-template-areas: "nav nav"
-                "header header"
+                         "header header"
                         "main aside"
                         "footer footer";
 }
-
+/*
+    Section NAV
+*/
 nav {
     background: black;
     grid-area: nav;
 }
-
+/*
+    Section HEADER
+*/
 header {
     background: yellow;
     grid-area: header;
 }
-
+/*
+    Section MAIN
+*/
 main {
     background: blue;
     grid-area: main;
 }
-
+/*
+    Section ASIDE
+*/
 aside {
     background: green;
     grid-area: aside;
 }
-
+/*
+    Section FOOTER
+*/
 footer {
     background: red;
     grid-area: fotter;
