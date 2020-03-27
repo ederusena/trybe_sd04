@@ -37,5 +37,26 @@ console.log(valorTeclado)
 let num1 = 10;
 let num2 = 10;
 let bool = num1 && num2;
-console.log( bool );
+console.log( true && true );
+
+// E, no final do conteúdo de hoje, você vai aprender algo que utilizará com muita frequência ao longo de toda a sua carreira:
+// as famosas estruturas condicionais.
+
+if (hour < 18) {
+    greeting = "Good day";
+  }
+
+  //JavaScript Switch Statement
+  switch(fruits) {
+    case "Banana":
+      alert("Hello")
+      break;
+    case "Apple":
+      alert("Welcome")
+      break;
+    
+  default:
+  
+      alert("Neither");
+  }
 
