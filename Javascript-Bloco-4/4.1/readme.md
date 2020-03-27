@@ -51,7 +51,7 @@ Use else to specify a block of code to be executed, if the same condition is fal
 Use else if to specify a new condition to test, if the first condition is false
 Use switch to specify many alternative blocks of code to be executed
 ```
-
+    
 ```js
 if (condition) {
   //  block of code to be executed if the condition is true
