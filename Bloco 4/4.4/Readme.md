@@ -38,3 +38,33 @@ Copiar
     </script>
   </body>
 </html>
+
+
+
+# Document.getElementsByClassName()
+
+
+Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada.  Quando invocado no objeto document, o documento é examinado por completo, incluindo o nó raiz. Você também pode invocar getElementsByClassName() em qualquer elemento; isso retornaria somente elementos que são descendentes do nó raiz especificado com o nome da classe.
+
+Sintaxe
+var elementos = document.getElementsByClassName(nomes); // ou:
+var elementos = rootElement.getElementsByClassName(nomes);
+elementos é uma lista viva do HTMLCollection de elementos encontrados.
+nomes é um texto que representa uma lista dos nomes das classes que são separados por espaço em branco.
+getElementsByClassName pode ser invocado por qualquer elemento, não somente pelo nó raiz document. O elemento no qual ele é chamado será usado como a raiz para a busca.
+Exemplos
+Retorna todos os elementos que possuem a classe 'teste'
+
+document.getElementsByClassName('teste');
+Retorna todos os elementos que possuem as classes 'vermelho' e 'teste'
+
+document.getElementsByClassName('vermelho teste');
+Retorna todos os elementos que possuem a classe 'teste' dentro do elemento que possui o ID 'principal'
+
+document.getElementById('principal').getElementsByClassName('teste');
+Nós podemos também usar os métodos do Array.prototype em qualquer dos elementos HTMLCollection passando o HTMLCollection como valor deste método. Aqui podemos encontrar todos os elementos do tipo div que possuem a classe 'teste':
+
+var elementosTeste = document.getElementsByClassName('teste');
+var divsTeste = Array.prototype.filter.call(elementosTeste, function(elementoTeste) {
+    return elementoTeste.nodeName === 'DIV';
+});
