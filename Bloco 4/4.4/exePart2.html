@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p class="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+
+    <script>
+        var paragraph = document.getElementsByClassName("paragraph")[0].innerHTML
+        paragraph.style.backgroundColor="blue"
+        
+        var x = document.getElementsByTagName("p")
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "red"
+        }
+      
+
+    </script>
+  </body>
+</html>

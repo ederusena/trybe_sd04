@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - getElementsByTagName</title>
+</head>
+<body>
+    <br>
+    <form>Eder</form>
+    <button>faz</button> 
+    <div>o urrro!</div>   
+
+    <script>
+        console.log(
+            document.getElementsByTagName("form")[0].innerText,
+            document.getElementsByTagName("button")[0].innerText,
+            document.getElementsByTagName("div")[0].innerText
+        );
+    </script>
+</body>
+</html>
