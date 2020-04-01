@@ -117,24 +117,28 @@
 
       //Exercise 9
       let h3 = [];
-      for (index = 0; index < 3; index++) {
-        h3[index] = document.createElement("h3");
-        h3[index].innerHTML = index + 1;
-        firstDiv.appendChild(h3[index]);
+      for (let index1 = 0; index1 < 3; index1++) {
+        h3[index1] = document.createElement("h3");
+        h3[index1].innerHTML = index1 + 1;
+        //Exercise 2-2 Adicione a classe description nas 3 tags h3 criadas;
+        h3[index1].className = "description";
+        firstDiv.appendChild(h3[index1]);
       }
       //Exercise 2-1 Adicione a classe title na tag h1 criada;
       document.h1.className="title";
 
-      //Exercise 2-2 Adicione a classe description nas 3 tags h3 criadas;
-      for (index = 0; index < 3; index++) {
-        h3[index].className = "description";
-        firstDiv.appendChild(h3[index]);
-      }
+      //Exercise 2-3 Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild()
+      firstDiv.removeChild(thirdDiv);
 
-      //Exercise 2-3
-      //Exercise 2-4
-      //Exercise 2-5
-      //Exercise 2-6
+      //Exercise 2.4 Centralize o div criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto do div;
+      forthDiv.style.marginRight = "auto";
+
+      //Exercise 2.5 Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+      secondDiv.parentElement.style.backgroundColor = "#0FA36B"
+
+      //Exercise 2.6 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+      listUl.removeChild(listUl.lastElementChild);
+      listUl.removeChild(listUl.lastElementChild);
 
       let array = [
         "RL",
