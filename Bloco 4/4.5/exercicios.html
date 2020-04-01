@@ -86,6 +86,28 @@
       img.className = "small-image";
       leftDiv.appendChild(img);
 
+      let array2 = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez"
+      ];
+
+      let lista2 = document.createElement("ul");
+      for (let index2 in array2) {
+        let item2 = document.createElement("li");
+        item2.innerHTML = array2[index2];
+        lista2.appendChild(item2);
+      }
+      rightDiv.appendChild(lista2);
+
+
       let array = [
         "RL",
         "Gordinho",
