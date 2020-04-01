@@ -57,67 +57,84 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      //Exercise 1
       let title = document.createElement("h1");
-      title.innerHTML = "Exercicios 4.5 - Javascript DOM";
+      title.innerHTML = "Exercício 4.5 - JavaScript DOM";
       document.body.appendChild(title);
 
+      //Exercise 2
       let firstDiv = document.createElement("div");
       firstDiv.className = "main-content";
       document.body.appendChild(firstDiv);
 
-      let childDiv = document.createElement("div");
-      childDiv.className = "center-content";
-      firstDiv.appendChild(childDiv);
-      
-      let paragrafo = document.createElement("p");
-      paragrafo.innerHTML = "Exerciocio 4 paragrafo";
-      childDiv.appendChild(paragrafo);
+      //Exercise 3
+      let secondDiv = document.createElement("div");
+      secondDiv.className = "center-content";
+      firstDiv.appendChild(secondDiv);
 
-      let leftDiv = document.createElement("div");
-      leftDiv.className = "left-content";
-      firstDiv.appendChild(leftDiv);
-    
-      let rightDiv = document.createElement("div");
-      rightDiv.className = "right-content";
-      firstDiv.appendChild(rightDiv);
-    
-      let img = document.createElement("img");
-      img.src = "https://picsum.photos/200";
-      img.className = "small-image";
-      leftDiv.appendChild(img);
+      //Exercise 4
+      let paragraph = document.createElement("p");
+      paragraph.innerHTML = "Algum texto legal!";
+      secondDiv.appendChild(paragraph);
 
-      let array2 = [
-        "um",
-        "dois",
-        "tres",
-        "quatro",
-        "cinco",
-        "seis",
-        "sete",
-        "oito",
-        "nove",
-        "dez"
+      //Exercise 5
+      let thirdDiv = document.createElement("div");
+      thirdDiv.className = "left-content";
+      firstDiv.appendChild(thirdDiv);
+
+      //Exercise 6
+      let forthDiv = document.createElement("div");
+      forthDiv.className = "right-content";
+      firstDiv.appendChild(forthDiv);
+
+      //Exercise 7
+      let image = document.createElement("img");
+      image.className = "small-image";
+      image.src = "https://picsum.photos/200";
+      thirdDiv.appendChild(image);
+
+      //Exercise 8
+      let listUl = document.createElement("ul");
+
+      let numbers = [
+        "Um",
+        "Dois",
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez"
       ];
-
-      let lista2 = document.createElement("ul");
-      for (let index2 in array2) {
-        let item2 = document.createElement("li");
-        item2.innerHTML = array2[index2];
-        lista2.appendChild(item2);
+      forthDiv.appendChild(listUl);
+      for (let index = 0; index < numbers.length; index++) {
+        let listElement = document.createElement("li");
+        listElement.innerHTML = numbers[index];
+        listUl.appendChild(listElement);
       }
-      rightDiv.appendChild(lista2);
 
+      //Exercise 9
+      let h3 = [];
+      for (index = 0; index < 3; index++) {
+        h3[index] = document.createElement("h3");
+        h3[index].innerHTML = index + 1;
+        firstDiv.appendChild(h3[index]);
+      }
+      //Exercise 2-1 Adicione a classe title na tag h1 criada;
+      document.h1.className="title";
 
-      let h3_1 = document.createElement("h3");
-      let h3_2 = document.createElement("h3");
-      let h3_3 = document.createElement("h3");
-      h3_1.innerText = "1";
-      h3_2.innerText = "2";
-      h3_3.innerText = "3";
+      //Exercise 2-2 Adicione a classe description nas 3 tags h3 criadas;
+      for (index = 0; index < 3; index++) {
+        h3[index].className = "description";
+        firstDiv.appendChild(h3[index]);
+      }
 
-      firstDiv.appendChild(h3_1);
-      firstDiv.appendChild(h3_2);
-      firstDiv.appendChild(h3_3);
+      //Exercise 2-3
+      //Exercise 2-4
+      //Exercise 2-5
+      //Exercise 2-6
 
       let array = [
         "RL",
