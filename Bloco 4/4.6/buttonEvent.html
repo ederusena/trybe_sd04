@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h4 id="title">meu botão</h4>
+<button id="btn">click</button>
+
+<script>
+    var botao = document.getElementById("btn");
+    var title = document.getElementById("title");
+    botao.addEventListener('click',function() {
+        //alert("click");
+        title.innerHTML = "Clicou no botao né vagabundo?"
+    })
+</script>
+</body>
+</html>
