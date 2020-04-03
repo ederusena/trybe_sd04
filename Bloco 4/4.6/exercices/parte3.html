@@ -6,30 +6,52 @@
   </head>
 
   <body>
-    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+    <img
+      style="position:absolute;"
+      src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+    />
     <script>
-        cat = document.getElementsByTagName('img')[0]
-        cat.style.left = "0px"
-        let foward = true;
-        function catwalk(){
-          if (parseInt(cat.style.left) > screen.width){
-                cat.style.webkitTransform = 'scaleX(-1)';
-                foward = false;
-                cat.style.left= parseInt(cat.style.left) - 10 + "px"
-            }else if(parseInt(cat.style.left) < -250){
-                cat.style.webkitTransform = 'scaleX(+1)';
-                foward = true;
-                cat.style.left= parseInt(cat.style.left) + 10 + "px"
-              }
-  
-          if(foward){
-            cat.style.left= parseInt(cat.style.left) + 10 + "px"
-          }else{
-              cat.style.left= parseInt(cat.style.left) - 10 + "px"
-          }
-  
+      /* var img = document.getElementsByTagName("img")[0];
+      img.style.left = "0px";
+      function catWalk() {
+        img.style.left = parseInt(img.style.left) + 10 + "px";
+      }
+      window.setInterval(catWalk, 50); */
+
+      /* var img = document.getElementsByTagName("img")[0];
+      img.style.left = "0px";
+      function catWalk() {
+        var currentLeft = parseInt(img.style.left);
+        img.style.left = currentLeft + 10 + "px";
+        if (currentLeft > window.innerWidth - img.width) {
+          img.style.left = "0px";
         }
-        window.setInterval(catwalk, 50)
+      }
+      window.setInterval(catWalk, 50); */
+
+      var img = document.getElementsByTagName("img")[0];
+      img.style.left = "0px";
+      var walkForwards = true;
+      function catWalk() {
+        var currentLeft = parseInt(img.style.left);
+
+        if (walkForwards && currentLeft > window.innerWidth - img.width) {
+          img.style.webkitTransform = 'scaleX(-1)';
+          walkForwards = false;
+        }
+        if (!walkForwards && currentLeft <= 0) {
+          img.style.webkitTransform = 'scaleX(+1)';
+          walkForwards = true;
+        }
+
+        if (walkForwards) {
+          
+          img.style.left = currentLeft + 10 + "px";
+        } else {
+          img.style.left = currentLeft - 10 + "px";
+        }
+      }
+      window.setInterval(catWalk, 50);
     </script>
   </body>
 </html>
