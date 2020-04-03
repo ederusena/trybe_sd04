@@ -36,21 +36,21 @@
         var currentLeft = parseInt(img.style.left);
 
         if (walkForwards && currentLeft > window.innerWidth - img.width) {
-          img.style.webkitTransform = 'scaleX(-1)';
+          img.style.webkitTransform = "scaleX(-1)";
           walkForwards = false;
         }
         if (!walkForwards && currentLeft <= 0) {
-          img.style.webkitTransform = 'scaleX(+1)';
+          img.style.webkitTransform = "scaleX(+1)";
           walkForwards = true;
         }
 
         if (walkForwards) {
-          
           img.style.left = currentLeft + 10 + "px";
         } else {
           img.style.left = currentLeft - 10 + "px";
         }
       }
+
       window.setInterval(catWalk, 50);
     </script>
   </body>
