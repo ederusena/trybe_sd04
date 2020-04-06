@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Reader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Content Reader</h1>
+
+    <div>
+        <h2>Configuration</h2>
+        <div>
+            <h3>Select the background color:</h3>
+            <input type="color" value = "#FFFFFF"autocomplete="on" id="colorBGInput">
+        </div>
+        <div>
+            <h3>Select the font color:</h3>
+            <input type="color" value = "#FFFFFF"autocomplete="on" id="colorTxtInput">
+        </div>
+        <div>
+            <h3>Set the line height</h3>
+            <input type="number" step= "0.1" value="1.1" id="fontSizeInput">
+        </div>
+        <div>
+            <h3>Set font family</h3>
+            <input type="radio" id="helvetica" name="fontStyle" value="helvetica">
+            <label for="helvetica">Helvetica</label><br>
+            <input type="radio" id="MontSerrat" name="fontStyle" value="MontSerrat">
+            <label for="MontSerrat">MontSerrat</label><br>
+            <input type="radio" id="Roboto" name="fontStyle" value="Roboto">
+            <label for="Roboto">Roboto</label>
+            </div>
+    </div>
+    <div id = mainText>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae aliquam velit. Vivamus eget nibh iaculis, vulputate nisi id, finibus urna. Nunc eu sapien erat. Nam mattis ligula et leo fermentum feugiat. Pellentesque convallis vestibulum justo a bibendum. Aliquam vehicula convallis molestie. Aenean non lectus volutpat, fringilla nunc sit amet, vulputate ex. Donec sapien ipsum, pretium at lectus et, faucibus dictum enim. Donec pulvinar pulvinar fermentum. Suspendisse tincidunt urna nec eros sollicitudin fermentum. Nunc sodales feugiat ipsum et vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc pretium urna risus, vel aliquet tortor posuere nec.
+
+            Donec gravida nibh at magna scelerisque luctus. Duis nec ex rhoncus, convallis turpis maximus, congue enim. Sed ac massa vulputate, facilisis orci sed, ullamcorper dolor. Morbi eget vehicula massa, sed eleifend turpis. In vitae nunc quis magna mattis pretium. Donec porttitor eros nec nulla feugiat, id eleifend velit cursus. Cras pharetra mi tellus, eu placerat ante vulputate vitae. In hac habitasse platea dictumst. Maecenas consectetur hendrerit nisl finibus vehicula. Curabitur id mi mi. Sed malesuada justo non libero placerat congue. Donec a congue ante. Vivamus tempor eleifend tellus. Sed molestie sapien ut augue sodales consequat.
+
+            Nam tortor sem, efficitur ut arcu vel, porta lacinia ipsum. Duis scelerisque ipsum felis, ac consectetur ipsum lobortis vitae. Fusce nec blandit dui. Curabitur lacus velit, pellentesque nec accumsan a, fringilla nec magna. Cras fringilla neque in scelerisque sodales. Etiam suscipit, justo ac convallis placerat, dolor nibh molestie elit, vitae iaculis sem velit a velit. Maecenas a facilisis magna. Aliquam at sapien lectus. Morbi non congue ligula. Vestibulum porttitor lorem ac dui condimentum dapibus. Quisque consectetur est in nulla suscipit blandit. Praesent egestas mattis orci eget porta. Cras justo tellus, imperdiet vel ultrices eget, porta ut justo. Nunc venenatis ut ante vitae suscipit. Praesent pulvinar nisl sit amet lorem pretium hendrerit.
+
+            Vestibulum viverra iaculis nisi et imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere congue semper. Vivamus mattis diam non risus sollicitudin, sed ultricies neque pellentesque. In vel fermentum dui. Phasellus laoreet gravida lobortis. Donec pellentesque, dui at accumsan faucibus, nisl elit aliquet nunc, ac gravida massa felis a ipsum. Praesent vulputate turpis eu quam iaculis accumsan.
+
+            Aliquam at eros neque. Duis et orci ac turpis congue vehicula quis eu magna. Pellentesque semper vulputate dolor. Ut aliquam a nibh sagittis volutpat. Integer eget nisl sagittis, vestibulum elit in, consequat tellus. Aliquam vehicula convallis urna, at viverra leo malesuada eget. Quisque tellus tortor, efficitur vitae maximus ullamcorper, tincidunt et elit. Donec in dui eget massa consectetur maximus. Vivamus eu tellus nec quam sodales varius a nec nunc. Praesent convallis nibh nulla. Fusce non finibus dui. Aenean ultrices pharetra odio et feugiat. Nulla ornare arcu id auctor vestibulum. Morbi ut euismod enim. Aliquam libero lacus, vehicula non mauris condimentum, vehicula rutrum lorem.</p>
+    </div>
+    <script>    
+    window.onload = function(){
+        let BGInput = document.getElementById("colorBGInput")
+        let colorInput = document.getElementById("colorTxtInput")
+        let lineInput = document.getElementById("fontSizeInput")
+        let mainText = document.getElementById("mainText")
+        let radioElements = document.getElementsByName('fontStyle')
+        function checkRadio(){
+            for (let i = 0; i < radioElements.length; i++){
+                if(radioElements[i].checked == true){
+                    selected = radioElements[i].value
+                    mainText.style.fontFamily = selected
+                    localStorage.setItem("radioInput", selected)
+                }
+            }
+        }
+        for (let i = 0; i < radioElements.length; i++){
+            radioElements[i].addEventListener("click", checkRadio)
+        }
+        lineInput.addEventListener("input", function(){
+            mainText.style.lineHeight = Number(lineInput.value)
+            localStorage.setItem("lineInput", lineInput.value)
+        })
+        BGInput.addEventListener("change", function(){
+            document.querySelector("body").style.backgroundColor = BGInput.value
+            localStorage.setItem("BGInput", BGInput.value)
+        })
+        colorInput.addEventListener("change", function(){
+            mainText.style.color = colorInput.value
+            localStorage.setItem("colorInput", colorInput.value)
+        })
+
+        //Addind style if user had already chosen any style previously
+        if (localStorage.getItem("BGInput")){
+            document.querySelector("body").style.backgroundColor = localStorage.getItem("BGInput")
+        }
+        if (localStorage.getItem("lineInput")){
+            mainText.style.lineHeight = localStorage.getItem("lineInput")
+        }
+        if (localStorage.getItem("colorInput")){
+            mainText.style.color = localStorage.getItem("colorInput")
+        }
+        if (localStorage.getItem("radioInput")){
+            mainText.style.fontFamily = localStorage.getItem("radioInput")
+        }
+    }
+    </script>
+</body>
+</html> 
