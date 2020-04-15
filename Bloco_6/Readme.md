@@ -3,24 +3,26 @@
 ## HTML & CSS - Forms
 
 ### Você será capaz de:
+
 - Criar formulários em HTML com as tags: input, button, textarea, select, form.
 
 ```html
-    <form action='minhapage.html' method='post'>
-        <!-- GET = pela url -->
-        <!-- POST = escondido -->
-        <input
-            required='required'
-            type='text'
-            name='email'
-            id='input-text'
-            class='form-blue input'
-            placeholder='digite seu email'>
-        <button type='submit'>Enviar</button>
-    </form>
+<form action="minhapage.html" method="post">
+  <!-- GET = pela url -->
+  <!-- POST = escondido -->
+  <input
+    required="required"
+    type="text"
+    name="email"
+    id="input-text"
+    class="form-blue input"
+    placeholder="digite seu email"
+  />
+  <button type="submit">Enviar</button>
+</form>
 ```
 
-###  HTML Input Types
+### HTML Input Types
 
 #### Here are the different input types you can use in HTML:
 
@@ -47,11 +49,22 @@
 22 . <input type="url">
 23 . <input type="week">
 
-
 #### Input Type Text
-* <input type="text"> defines a single-line text input field:
+
+- <input type="text"> defines a single-line text input field:
 <form action="/action_page.php">
 <input type="number" min="1" max="5">
+</form>
+
+<form action="/action_page.php">
+<input type="text" disabled>
+</form>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" maxlength="4" size="4">
 </form>
 https://www.w3schools.com/html/html_form_input_types.asp
 
