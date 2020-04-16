@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        Formulário
+    </header>
+    <section>
+        <form class="container" onsubmit="return false;">
+            <fieldset>
+                <div>
+                    <label for="name"><b>Nome</b></label>
+                    <input id="myInput name" type="text" maxlength="40" required>
+                </div>
+
+                <div>
+                    <label for="email"><b>Email</b></label><br>
+                    <input id="myInput email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+                </div>
+
+                <div>
+                    <label for="CPF"><b>CPF</b></label>
+                    <input id="myInput CPF" type="text" maxlength="11" required>
+                </div>
+
+                <div>
+                    <label for="endereco"><b>Endereço</b></label>
+                    <input id="myInput endereco" type="text" maxlength="200" required>
+                </div>
+
+                <div>
+                    <label for="cidade"><b>Cidade</b></label>
+                    <input id="myInput cidade" type="text" maxlength="28" required>
+                </div>
+
+                <div>
+                    <label for="state"><b>State</b></label>
+                    <select id="myInput state">
+                        <option value="" selected>Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+
+                <div>
+                    <br>
+                    <legend><b>Tipo</b></legend>
+                    <input id="myInput talk-type-1" name="talk-type" type="radio" value="main-stage" />
+                    <label for="talk-type-1">Casa</label>
+                    <input id="myInput talk-type-2" name="talk-type" type="radio" value="workshop" checked />
+                    <label for="talk-type-2">Apartamento</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <label for="story"><b>Resumo do currículo</b></label><br>
+                    <textarea id="myInput story" name="story" rows="5" cols="60"></textarea>
+                </div>
+
+                <div>
+                    <label for="Cargo"><b>Cargo</b></label>
+                    <input id="myInput Cargo" type="text" maxlength="40" required>
+                </div>
+
+                <div>
+                    <label for="DCargo"><b>Descrição do cargo</b></label>
+                    <input id="myInput DCargo" type="text" maxlength="500" required>
+                </div>
+
+                <div>
+                    <label for="date"><b>Data de inicio</b></label><br>
+                    <input id="myInput date" type="date" required>
+                </div>
+
+                <div>
+                    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+
+                <button id='clearinput'>Limpa Campos</button>
+
+            </fieldset>
+        </form>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
