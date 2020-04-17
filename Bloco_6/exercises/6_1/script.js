@@ -1,0 +1,1 @@
+document.getElementById('datepicks').DatePickerX.init();

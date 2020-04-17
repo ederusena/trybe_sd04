@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/DatePickerX.min.css">
+</head>
+
+<body>
+	<div class="container grey darken-3">
+		<div class="row">
+			<form class="col l12 m12 s12 js-form">
+				<div class="row">
+					<div class="center-align section card-panel purple lighten-3">
+						<h8>Meu grupo do formulário</h8>
+					</div>
+					<div class="input-field col s12">
+						<input class="teal-text text-lighten-5" placeholder="Nome" id="first_name" type="text" data-validate-field="name">
+					</div>
+
+					<div class="input-field col s12">
+						<input class="teal-text text-lighten-5" placeholder="Email" id="email" type="email" data-validate-field="email">
+					</div>
+					<div class="input-field col s12">
+						<input class="teal-text text-lighten-5" placeholder="CPF" id="cpf" type="text" data-validate-field="text">
+					</div>
+					<div class="input-field col s12">
+						<input class="teal-text text-lighten-5" placeholder="Endereço" id="endereco" type="text" data-validate-field="text">
+					</div>
+					<div class="input-field col s12">
+						<input class="teal-text text-lighten-5" placeholder="Cidade" id="cidade" type="text" data-validate-field="text">
+					</div>
+
+					<div>
+						<select class="estado" name="lista">
+							<option disabled selected>Qual sua idade?</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="blue-text text-darken-2">Tipo de Residencia</div>
+				<form action="#">
+					<div class="row col s5">
+						<p>
+							<label>
+								<input name="group1" type="radio" checked data-validate-field="radio"/>
+								<span>Casa</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input name="group1" type="radio" data-validate-field="radio"/>
+								<span>Apartamento</span>
+							</label>
+						</p>
+					</div>
+		</div>
+
+		<div class="row">
+			<div class="card-panel teal lighten-2">Meu grupo do formulário</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="textarea1" class="materialize-textarea"></textarea>
+					<label for="textarea1">Textarea</label>
+				</div>
+			</div>
+			<div class="input-field col s12">
+				<input placeholder="Cargo" id="Cargo" type="text" class="validate">
+				<label for="Cargo">Cargo</label>
+			</div>
+			<div class="input-field col s12">
+				<input placeholder="Descrição do cargo" id="Descrição do cargo" type="text" class="validate">
+				<label for="Descrição do cargo">Descrição do cargo</label>
+			</div>
+			<div class="">
+				<input type="text" id="datepicks">
+			</div>
+			<div class="input-field col s12">
+				<a class="waves-effect waves-light btn-small">Button</a>
+			</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="/js/DatePickerX.js"></script>
+	<script src="script.js"></script>
+	<script src="/js/just-validate.min.js"></script>
+
+	<script>
+		new window.JustValidate('.js-form', {
+			rules: {
+				radio: {
+					required: true
+				},
+				checkbox: {
+					required: true
+				},
+				checkbox2: {
+					required: true
+				},
+				email: {
+					required: true,
+					email: true,
+				}
+			},
+
+			focusWrongField: true,
+
+			submitHandler: function (form, values, ajax) {
+				ajax({
+					url: 'https://just-validate-api.herokuapp.com/submit',
+					method: 'POST',
+					data: values,
+					async: true,
+					callback: function (response) {
+						alert('AJAX submit successful! \nResponse from server:' + response)
+					},
+					error: function (response) {
+						alert('AJAX submit error! \nResponse from server:' + response)
+					}
+				});
+			},
+
+			invalidFormCallback: function (errors) {
+				console.log(errors);
+			},
+		});
+
+		new window.JustValidate('.js-form-2', {
+			rules: {
+				email: {
+					required: true,
+					email: true,
+					remote: {
+						url: 'https://just-validate-api.herokuapp.com/check-correct',
+						sendParam: 'email',
+						successAnswer: 'OK',
+						method: 'GET'
+					}
+				},
+				login: {
+					required: true,
+					remote: {
+						url: 'https://just-validate-api.herokuapp.com/check-correct',
+						sendParam: 'login',
+						successAnswer: 'OK',
+						method: 'GET'
+					}
+				}
+			},
+			messages: {
+				email: {
+					remote: 'Email already exist',
+					email: 'Email not valid!'
+				},
+				login: {
+					remote: 'Login already exist',
+					required: 'Login is required!'
+				}
+			},
+		}
+		);
+	</script>
+</body>
+
+
+
+
+</html>
