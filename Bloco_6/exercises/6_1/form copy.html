@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+
+<head>
+	<title>Título do meu website</title>
+	<meta charset="utf-8" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="script.js">	</script>
+</head>
+
+<body>
+	<div class="container col s12">
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="center-align section card-panel purple lighten-3">
+						<h8>Meu grupo do formulário</h8>
+
+					</div>
+					<div class="input-field col s12">
+						<input placeholder="Nome" id="first_name" type="text" class="validate">
+						<label for="first_name">Nome Completo</label>
+					</div>
+
+					<div class="input-field col s12">
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+					<div class="input-field col s12">
+						<input placeholder="CPF" id="cpf" type="text" class="validate">
+						<label for="cpf">CPF</label>
+					</div>
+					<div class="input-field col s12">
+						<input placeholder="Endereço" id="endereco" type="text" class="validate">
+						<label for="endereco">Endereço</label>
+					</div>
+					<div class="input-field col s12">
+						<input placeholder="Cidade" id="cidade" type="text" class="validate">
+						<label for="cidade">Cidade</label>
+					</div>
+
+					<div>
+						<select class="estado" name="lista">
+							<option disabled selected>Qual sua idade?</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="blue-text text-darken-2">Tipo de Residencia</div>
+				<form action="#">
+					<div class="row col s5">
+						<p>
+							<label>
+								<input name="group1" type="radio" checked />
+								<span>Casa</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input name="group1" type="radio" />
+								<span>Apartamento</span>
+							</label>
+						</p>
+					</div>
+				</form>
+		</div>
+
+		<div class="row">
+			<form class="col s12">
+				<div class="card-panel teal lighten-2">Meu grupo do formulário</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea id="textarea1" class="materialize-textarea"></textarea>
+						<label for="textarea1">Textarea</label>
+					</div>
+				</div>
+				<div class="input-field col s12">
+					<input placeholder="Cargo" id="Cargo" type="text" class="validate">
+					<label for="Cargo">Cargo</label>
+				</div>
+				<div class="input-field col s12">
+					<input placeholder="Descrição do cargo" id="Descrição do cargo" type="text" class="validate">
+					<label for="Descrição do cargo">Descrição do cargo</label>
+				</div>
+				<div class="input-field col s12">
+					<input type="date" class="datepicker">
+				</div>
+				<a class="waves-effect waves-light btn-small">Button</a>
+			</form>
+		</div>
+	</div>
+	<script src="script.js">
+		</script>
+</body>
+
+
+
+
+</html>
