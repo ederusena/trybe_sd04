@@ -6,3 +6,32 @@ body {
     width:80%;
     margin: 0 auto;
 }
+
+/* --- Container 1 --- */
+
+.flex-container {
+    border: 1px solid rgb(36, 36, 36);
+    width: 600px;
+    display: flex;
+    flex-wrap: row wrap;
+    margin-bottom: 50px;
+}
+
+.box {
+    background: rgb(255, 68, 0);
+    border: 2px solid gray;
+    padding: 0 40px;
+    border-radius: 10px;
+}
+
+/* --- Container 2 --- */
+
+.flex-container:nth-child(4) > .box {
+    background: orchid;
+}
+
+.flex-container:nth-child(4) {
+    height: 400px;
+    justify-content: space-between;
+    flex-direction: column;
+}
