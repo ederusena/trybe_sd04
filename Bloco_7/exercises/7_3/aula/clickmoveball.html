@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    p {
+      padding-left: 60px;
+    }
+    #foo {
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      background: #c00;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 1s;
+    }
+  </style>
+  <body>
+    <p>Click anywhere to move the ball</p>
+    <div id="foo"></div>
+    <div class="coord">Coord</div>
+  </body>
+  <script>
+      window.onload = () => {
+    var f = document.getElementById("foo");
+    document.addEventListener(
+      "click",
+      function (ev) {
+        var coord = document.getElementsByClassName("coord");
+        coord.innerHTML = ev.clientX + ev.clientY;
+        f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
+        f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
+        
+      },
+      false
+    );
+    
+    }
+  </script>
+</html>
