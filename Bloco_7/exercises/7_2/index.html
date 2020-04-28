@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @keyframes opacidade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes opacidade {
+      0% {
+        opacity: 0;
+        font-size: 2rem;
+      }
+      60% {
+        opacity: 1;
+        font-size: 4rem;
+      }
+      100% {
+        opacity: 1;
+        font-size: 2rem;
+      }
+    }
+
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 100%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+    .p2 {
+      animation-duration: 5s;
+      animation-name: slidein;
+    }
+
+    .p1 {
+      font-size: 2rem;
+      animation-duration: 3s;
+      animation-name: opacidade;
+    }
+  </style>
+  <body>
+    <p class="p1">Eu estava invisivi!</p>
+    <p class="p2">Eu estou deslisando!</p>
+  </body>
+</html>
