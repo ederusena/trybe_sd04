@@ -57,17 +57,10 @@
         width: 50px;
         height: 50px;
       }
-      @keyframes ex1 {
-        0% {
-            margin-left: 0%;
-            background-color: tomato;}
-        100% {
-            margin-left: 100%;
-            background-color: gold;}
-      }
-      #exercise-1 {
-            animation: 5s ex1 infinite;
-        }
+      @keyframes ex1 { 0% { margin-left: 0%;} 100% { margin-left: 96%;}}
+      #exercise-1 { animation: 5s 1s ex1; }
+
+      #exercise-2 { animation: 2s 2s ex1; margin-left: 96%; }
     </style>
   </head>
   <body>
