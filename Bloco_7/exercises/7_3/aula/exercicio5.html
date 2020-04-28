@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      transition: 2s;
+    }
+  </style>
+  
+  <body>
+    <h1>Exercise</h1>
+    Define a transition on the .box for the "left" property. Add JavaScript code
+    to the clicked function to toggle the position of the box between left=0 and
+    left=300, i.e., make the box move left to right and right to left when
+    clicked. (Can you make it move in a square path?
+    Left->Right->Bottom->Right->Top)
+    <div class="box">Lorem</div>
+    
+  </body>
+  <script>
+    window.onload = () => {
+    var el = document.querySelector(".box");
+
+    el.addEventListener("click", clickedBox, false);
+    var pos = 1;
+
+    function clickedBox(evt) {
+      if (pos === 1){
+        pos = pos + 1;
+       el.style.left = "300px";
+      }else if (pos === 2){
+        pos = pos + 1;
+        el.style.left = "300px";
+        el.style.top = "300px";
+      }else if (pos === 3){
+        pos = pos + 1;
+        el.style.left = "0px";
+        el.style.top = "300px";
+      }else if (pos === 4){
+        pos = 1;
+        el.style.left = "0px";
+        el.style.top = "0px";
+      }
+    }}
+  </script>
+</html>
