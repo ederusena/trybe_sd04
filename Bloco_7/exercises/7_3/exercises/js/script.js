@@ -19,23 +19,23 @@ window.onload = () => {
         }
     });
 
-    // Função que retorna uma imagem aleatoria 
+    // Função que retorna uma imagem aleatoria
     function getRandomImage() {
-    var arrImage = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
-    // Calculo randomico para retornar um index aleatorio do nosso array de classes.
-    // Pegamos um valor randomico decimal de 0 a 1 e multiplicamos pelo tamanho do array e arredondamos para baixo.
-    //  ex: 0.8420929154329106 * 7 = 5.894650408030374 -> 5
-    const imageIndex = Math.floor(Math.random() * arrImage.length)
-    return arrImage[imageIndex]; // Em seguida retornamos o item que está nessa posição aleatoria do array
-}
- // Função que retorna uma classe aleatoria de transformacao
-function getRandomTransform() {
-    var transforms = [
-        "rotate", "translate-up", "translate-down",
-        "scale-up", "scale-down", "skew-up", "skew-down"
-      ]
-    const transformIndex = Math.floor(Math.random() * transforms.length)
-    return transforms[transformIndex]; // Em seguida retornamos o item que está nessa posição aleatoria do array
-  }
+        var arrImage = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
+        // Calculo randomico para retornar um index aleatorio do nosso array de classes.
+        // Pegamos um valor randomico decimal de 0 a 1 e multiplicamos pelo tamanho do array e arredondamos para baixo.
+        //  ex: 0.8420929154329106 * 7 = 5.894650408030374 -> 5
+        const imageIndex = Math.floor(Math.random() * arrImage.length)
+        return arrImage[imageIndex]; // Em seguida retornamos o item que está nessa posição aleatoria do array
+    }
+    // Função que retorna uma classe aleatoria de transformacao
+    function getRandomTransform() {
+        var transforms = [
+            "rotate", "translate-up", "translate-down",
+            "scale-up", "scale-down", "skew-up", "skew-down"
+        ]
+        const transformIndex = Math.floor(Math.random() * transforms.length)
+        return transforms[transformIndex]; // Em seguida retornamos o item que está nessa posição aleatoria do array
+    }
 }
 
