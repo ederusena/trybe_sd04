@@ -1,0 +1,38 @@
+body {
+    background:  url("../img/board.jpeg") 0px 0px /
+    100% no-repeat  rgb(92, 1, 1); 
+}
+
+.container-noturned-card {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.noturned-card img{
+    height: 115px;
+    transform: rotate(7deg);
+    margin-top: 25px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+.container-turned-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 90%;
+    padding: 5px;
+    height: auto;
+}
+
+.turned-card{
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card img{
+    width: 100px;
+    box-shadow: 10px 10px;
+}
