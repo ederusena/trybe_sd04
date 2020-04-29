@@ -1,0 +1,69 @@
+body {
+    background:  url("../img/board.jpeg") 0px 0px /
+    100% no-repeat  rgb(92, 1, 1); 
+}
+
+.container-noturned-card {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.noturned-card img{
+    height: 115px;
+    transform: rotate(7deg);
+    margin-top: 25px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+.container-turned-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 90%;
+    padding: 5px;
+    height: auto;
+}
+
+.turned-card{
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card img{
+    width: 100px;
+    box-shadow: 10px 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.translate-up:hover {
+    transform: translateY(-60px);
+}
+
+.translate-down:hover {
+    transform: translateY(60px);
+}
+
+.scale-up:hover {
+    transform: scale(1.2)
+}
+
+.scale-down:hover {
+    transform: scale(0.8)
+}
+
+.skew-up:hover {
+    transform: skew(-30deg);
+}
+
+.skew-down:hover {
+    transform: skew(30deg);
+}

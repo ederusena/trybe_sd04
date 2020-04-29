@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <style>
+      @keyframes rotating {
+        0% {
+          transform: rotate3d(1, 1, 1, 150deg);
+        }
+        100% {
+          transform: rotate3d(-1, -1, -1, 150deg);
+        }
+      }
+      .eternal-rotating {
+        margin-top: 100px;
+        font-size: 3rem;
+        width: fit-content;
+        animation: rotating 10ms linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eternal-rotating">Hélice de avião!</div>
+  </body>
+</html>

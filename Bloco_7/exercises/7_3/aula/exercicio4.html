@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+div#main {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+div#main .content {
+    position: absolute;
+    text-align:center;
+    width:200px;
+    top:50%;
+    transform:translate(0 -50%);
+    font-size:24pt;
+}
+
+div#main .topleft {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    background: red;
+    transform-origin: top left;
+    
+}
+
+div#main .topright {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 100px;
+    background: yellow;
+    transform-origin: top right;
+}
+
+div#main .bottomleft {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 100px;
+    background: blue;
+    transform-origin: bottom left;
+}
+
+div#main .bottomright {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    background: green;
+    transform-origin: bottom right;
+}
+
+div#main:hover .topleft {
+  transition: 1s ;
+  transform: rotate(90deg);
+}
+div#main:hover .topright {
+  transition: 1s ;
+  transform: rotate(-90deg);
+}
+div#main:hover .bottomleft {
+  transition: 1s ;
+  transform: rotate(-90deg);
+}
+
+div#main:hover .bottomright {
+  transition: 1s ;
+  transform: rotate(90deg);
+}
+  </style>
+  <body>
+    
+<h1>Exercise</h1>
+Apply transitions to the CSS so that the coloured squares "open-up" when the div "main" is hovered.
+To "open-up" each square should rotate 90deg by its outer-most corner. 
+<div id="main">
+    <div class="content">Hi!</div>
+    <div class="topleft"></div> <div class="topright"></div>
+    <div class="bottomleft"></div> <div class="bottomright"></div>
+</div>
+Tips:
+Use transform-origin in each square selector and apply a transition to the transform property.
+<p>Hover over the div element above.</p>
+  </body>
+</html>
