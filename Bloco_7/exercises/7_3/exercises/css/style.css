@@ -35,4 +35,35 @@ body {
 .card img{
     width: 100px;
     box-shadow: 10px 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.translate-up:hover {
+    transform: translateY(-60px);
+}
+
+.translate-down:hover {
+    transform: translateY(60px);
+}
+
+.scale-up:hover {
+    transform: scale(1.2)
+}
+
+.scale-down:hover {
+    transform: scale(0.8)
+}
+
+.skew-up:hover {
+    transform: skew(-30deg);
+}
+
+.skew-down:hover {
+    transform: skew(30deg);
 }
