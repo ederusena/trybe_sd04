@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    .main-container {
+        background:rgba(255, 22, 236, 0.836);
+        width: 400px;
+        height: 400px;
+        border-radius: 18px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 25px;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .aligncontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h1count {
+        color: black;
+    }
+
+    hr {
+        border: 1px solid;
+        width: 300px;
+    }
+    .btn2 {
+        margin: 15px;
+    }
+    .stringinput    {
+        padding: 10px;
+    }
+</style>
+<body>
+    <section class="main-container shadow-lg">
+        <div class="aligncontainer">
+        <div class="clickview">
+            <h1 id="h1count"></h1>
+        </div>
+        <div class="btn">
+            <button type="button" id="btn" class="btn btn-dark">Click</button>
+            <hr>
+        </div>
+        <div class="inputfield">
+            <input placeholder="String" type="text" id="stringinput">
+        </div>
+        <div class="btn2">
+            <button type="button" id="btnstring" class="btn btn-dark">Primary</button>
+        </div>
+        <div class="clickview2">
+            <h1 id="stringchanged">Tryber x aqui!</h1>
+        </div>
+        <div class="clickview3">
+            <h1 id="stringchanged2">Tudo bem?</h1>
+        </div>
+    </div>
+    </section>
+    <script>
+        window.onload = () => {
+          let btn = document.getElementById("btn");
+          let clickCount = 0; 
+          document.getElementById('h1count').innerHTML = `Count Clicks: ${clickCount}`;
+
+          btn.addEventListener("click", () => {
+            clickCount++;
+            document.getElementById('h1count').innerHTML = `Count Clicks: ${clickCount}`;
+          })
+
+          let btn2 = document.getElementById('btnstring');
+
+          btn2.addEventListener("click", () => {
+            let strings = document.getElementById('stringinput').value;
+            let stringchanged = document.getElementById('stringchanged');
+            let str = `Tryber ${strings} aqui!`;
+            stringchanged.innerHTML = str;
+          })
+        }
+    </script>
+</body>
+</html>
