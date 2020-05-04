@@ -1,22 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ace of Spades</title>
-</head>
-<link rel="stylesheet" href="css/style.css">
-<body>
-    <nav class="container-noturned-card">
-        <div class="noturned-card">
-            <img class="turned-img" src="img/verso-da-carta.png" alt="">
-        </div>
-    </nav>
+<!-- Foi criado apenas um arquivo para facilitar a compreensão do desenvolvimento do exercício -->
+<!-- Atenção! Para testar o arquivo deve haver a pasta cartas com os assets(imagens) necessários para criação das cartas -->
 
-    <figure class="container-turned-card">
-        <div class="turned-card" id="turned-card"></div>
-        <div class="turned-card" id="turned-card"></div>
-    </figure>
+<style>
+  .card-image {
+    width: 200px;
+  }
+
+  /* Estilo usados para a caixa das cartas aleatórias  */
+  .card-box{
+    /* Usamos a propriedade grid que divide a largura da tela em 7 frações iguais */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  /* Animações */
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Classes para atribuir as animações aleatóriamente */
+  .random-card0:hover {
+    animation: scale 1s 0s 1 ease-in-out;
+  } 
+  .random-card1:hover {
+    animation: spin 1s 0s 1 ease-in-out;
+  } 
+</style>
+
+<body>
+  <!-- Imagem do verso da carta que está funcionando como um botão para adicionar nova carta -->
+  <img src="./img/verso-da-carta.png" class="card-button card-image" alt="">
+
+  <!-- Container das cartas aleatórias -->
+  <div class="card-box">
+  </div>
 </body>
-<script src="js/script.js"></script>
-</html>
+
+
+<script>
+  // Array contendo os nomes das imagens para selecionar as cartas aleatóriamente
+  const cards = ['1.png', 
+                 '2.png',
+                 '3.png',
+                 '4.png',
+                 '5.png',
+                 '6.png',
+                 '7.png'];
+
+  // Utilizamos a classe 'card-button' como hook para seleção da imagem de verso da carta
+  const button = document.querySelector('.card-button');
+  
+  // Evento que cria e insere uma carta aleatória no container das cartas
+  button.addEventListener('click', () => {
+
+    // Criação de uma carta aleatória
+    const randomCard = document.createElement('img');
+
+    // Adição de uma imagem para a carta
+    randomCard.src = './img/' + cards[Math.floor(Math.random() * 7)];
+    
+    // Adição de classes para a atribuição de uma animação aleatória e estilização da carta
+    randomCard.classList.add('random-card' + (Math.floor(Math.random() * 2)));
+    randomCard.classList.add('card-image');
+
+    // Inserção da carta no container de cartas aleatórias
+    const cardBox = document.querySelector('.card-box');
+    cardBox.appendChild(randomCard);
+
+  })
+</script>
