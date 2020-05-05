@@ -25,7 +25,9 @@ assert.notDeepEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4])
 
 // 3. Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array
 // passado por parâmetro sofreu alterações
-assert.deepEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4])
+const array = [1, 2, 3, 4];
+myRemoveWithoutCopy(array, 3);
+assert.notDeepStrictEqual(array, [1, 2, 3, 4]);
 
 // 4. Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado
 assert.deepEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4])

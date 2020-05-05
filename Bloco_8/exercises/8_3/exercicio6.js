@@ -26,7 +26,7 @@ assert.equal(myFizzBuzz(5), 'buzz')
 
 // 4 - Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno 
 // é o esperado
-assert.notEqual(myFizzBuzz(11), 'buzz')
+assert.strictEqual(myFizzBuzz(16), 16);
 
 // 5 - Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
 assert.equal(myFizzBuzz('text'), false)
