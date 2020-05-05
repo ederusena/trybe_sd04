@@ -18,10 +18,11 @@ const lesson1 = {
     turno: 'noite',
   };
 
-function ex1(obj, key, value){
-  obj[key] = value;
-}
+// Exercicio 1 parte 1
+const ex1 = (obj, key, value) => obj[key] = value;
+console.log(ex1(lesson2, 'turno', 'manhã'));
+console.log(lesson2);
 
 // Exercicio 1 parte 2 
-ex1(lesson2, 'turno', 'manhã')
-console.log(lesson2)
+const ex2 = obj => Object.keys(obj);
+console.log(ex2(lesson2));
