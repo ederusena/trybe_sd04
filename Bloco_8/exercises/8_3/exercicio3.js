@@ -14,3 +14,4 @@ function mySum(arr) {
 // Teste se a chamada mySum([1, 2, 3, 4]) retorna o valor 10
 assert.deepEqual(mySum([1,2,3,4]),10)
 // Teste se a chamada mySum([1, -2, -3, 4]) retorna o valor esperado
+assert.deepEqual(mySum([-1,-2,-3, 4]),-2)
