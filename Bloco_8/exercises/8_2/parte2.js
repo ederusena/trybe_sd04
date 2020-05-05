@@ -43,5 +43,5 @@ console.log(ex4(lesson2));
 // que deve agrupar todas as aulas através do Object.assign.
 // Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
 // Ao executar o comando console.log(allLessons), a saída deverá ser a seguinte:
-const ex5 = (obj,obj2,obj3) => Object.assign((obj,obj2,obj3);
+const ex5 = (obj,obj2,obj3) => Object.assign((obj,obj2,obj3));
 console.log(ex5(lesson1, lesson2, lesson3));
