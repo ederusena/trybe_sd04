@@ -17,4 +17,11 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
-  
+
+function ex1(obj, key, value){
+  obj[key] = value;
+}
+
+// Exercicio 1 parte 2 
+ex1(lesson2, 'turno', 'manhã')
+console.log(lesson2)
