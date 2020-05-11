@@ -3,7 +3,7 @@
 
 // Dica: use as funções filter e map
 
-// const assert = require('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -82,5 +82,5 @@ function fantasyOrScienceFictionAuthors() {
   ).map((book)=>`${book.author.name}`);
   return bookies.sort()
 }
-console.log(fantasyOrScienceFictionAuthors())
-// assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
+
+assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
