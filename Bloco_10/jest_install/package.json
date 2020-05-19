@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^26.0.1"
