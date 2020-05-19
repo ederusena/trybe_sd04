@@ -14,15 +14,11 @@
 //   return reverseStr === lowRegStr;
 // }
 
-function palindrome(str) {
-  var re = /[^A-Za-z0-9]/g;
-  str = str.toLowerCase().replace(re, '');
-  var len = str.length;
-  for (var i = 0; i < len/2; i++) {
-    if (str[i] !== str[len - 1 - i]) {
-        return false;
-    }
+const palindrome = str => {
+  for (let i = 0, j = str.length - 1; i <= j; i += 1, j -= 1) {
+    if (str[i] !== str[j]) return false;
   }
   return true;
- }
+}
+
 module.exports = palindrome;
