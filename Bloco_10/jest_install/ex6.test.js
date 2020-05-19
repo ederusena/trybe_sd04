@@ -18,7 +18,7 @@ test('Faça uma chamada com um número que não é divisível por 3 ou 5', () =>
 });
 
 test('Faça uma chamada com um parâmetro que não é um número', () => {
-    expect(myFizzBuzz('1')).toEqual(false);
+    expect(myFizzBuzz('1')).toBeFalsy();
 });
 
 // 6. A função myFizzBuzz(num)
