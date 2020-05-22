@@ -13,15 +13,14 @@ const fetchPromise = () => {
   const myPromise = new Promise((resolve, reject) => {
     const myArray = Array.from({ length: 10 }, () =>
                     Math.floor(Math.random() * 50) + 1);
-
+    console.log(myArray)
     const sum = myArray.map(number => number * number)
                        .reduce((number, acc) => number + acc, 0);
 
-    if (sum < 8000){
+    if (sum < 8000)
         resolve(sum);
-    }else {
+    else
         reject(sum);
-    };
   });
 
   myPromise
