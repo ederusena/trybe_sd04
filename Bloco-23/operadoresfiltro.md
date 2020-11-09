@@ -37,7 +37,7 @@ mongo [database] <file>.json
 
 ```js
 db.filmes.find({ }).sort( { ano : 1 } ) // order by ano asc
-db.filmes.find({ }).sort( { ano : -1 } ) // order by ano desc
+db.filmes.find({ }).sort(     { ano : -1 } ) // order by ano desc
 
 db.filmes.count(); // ou
 db.filmes.find().count();
