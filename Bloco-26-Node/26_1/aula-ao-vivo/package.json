@@ -1,0 +1,16 @@
+{
+  "name": "aula-ao-vivo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "inquirer": "^7.3.3",
+    "readline-sync": "^1.4.10"
+  }
+}
