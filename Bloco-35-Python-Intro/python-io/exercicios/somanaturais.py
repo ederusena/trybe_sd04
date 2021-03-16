@@ -12,6 +12,18 @@ while numeros != 'sair':
 
 print(f'Soma total: {soma}')
 
+# soma = 0
+# numeros = input('Digite um numero natural: ')
+
+# while numeros != 1111:
+#     try:
+#         numeros = int(input('Digite um numero natural: '))
+#         soma += numeros
+#     except ValueError:
+#         print('Digite um numero')
+
+
+
 # nums = input("Insira valores aqui, separados por espaço: ")
 
 # numsArr = nums.split(" ")
